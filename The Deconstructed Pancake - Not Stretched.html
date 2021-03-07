@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Deconstructed Pancake - NotStretched</title>
+    <style>
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        } 
+
+        .parent.additional-css {
+            background-color: aquamarine;
+        }
+
+        .box {
+            flex: 0 1 300px;
+            margin: 5px;
+        }
+
+        .box.additional-css {
+            background-color: chartreuse;
+            border-radius: 5px;
+            display: grid;
+            place-content: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent additional-css">
+        <div class="box additional-css">1</div>
+        <div class="box additional-css">2</div>
+        <div class="box additional-css">3</div>
+    </div>
+</body>
+</html>

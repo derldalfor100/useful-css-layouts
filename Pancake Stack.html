@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancake Stack</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        .parent.additional-css {
+            position: absolute;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+        }
+
+        .section.additional-css {
+            font-size: 1.5rem;
+            padding: 1rem;
+            border-width: 1px;
+            border-style: dashed;
+            border-color: rgba(0, 128, 0, 0.37);
+        }
+
+        .section.additional-css:first-child {
+            background-color: rgba(255, 255, 0, 0.688);
+        }
+
+        .section.additional-css:nth-child(2) {
+            background-color: rgba(128, 0, 128, 0.288);
+        }
+
+        .section.additional-css:last-child {
+            background-color: rgba(0, 45, 128, 0.288);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent additional-css">
+        <header class="section additional-css" contenteditable>Header</header>
+        <main class="section additional-css" contenteditable>Main</main>
+        <footer class="section additional-css" contenteditable>Footer Content</footer>
+    </div>
+</body>
+
+</html>

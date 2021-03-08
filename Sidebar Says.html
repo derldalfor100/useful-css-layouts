@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Says</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: minmax(250px, 35%) 1fr;
+        }
+
+        .parent.additional-css {
+            position: absolute;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+        }
+
+        .section.additional-css {
+            font-size: 1.5rem;
+            padding: 1rem;
+            border-width: 1px;
+            border-style: dashed;
+            border-color: rgba(0, 128, 0, 0.37);
+        }
+
+        .section.additional-css:first-child {
+            background-color: rgba(255, 255, 0, 0.688);
+        }
+
+        .section.additional-css:nth-child(2) {
+            background-color: rgba(128, 0, 128, 0.288);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent additional-css">
+        <div class="section additional-css" contenteditable>
+            Min: 150px / Max: 25%
+        </div>
+        <div class="section additional-css" contenteditable>
+            This element takes the second grid position (1fr), meaning
+            it takes up the rest of the remaining space.
+        </div>
+    </div>
+</body>
+</html>

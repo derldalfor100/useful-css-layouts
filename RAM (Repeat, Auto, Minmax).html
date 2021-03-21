@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAM (Repeat, Auto, Minmax)</title>
+    <style>
+        body {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+        }
+
+        .parent {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .parent.additional-css {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+        }
+
+        .box {
+            font-size: 2rem;
+            padding: 1rem;
+            display: grid;
+            place-items: center;
+            border-radius: 1rem;
+            border-style: dashed;
+        }
+
+        .box:first-child {
+            background-color: hsl(335, 52%, 92%);
+        }
+
+        .box:nth-child(2) {
+            background-color: hsl(283, 24%, 86%);
+        }
+
+        .box:nth-child(3) {
+            background-color: hsl(187, 61%, 79%);
+        }
+
+        .box:last-child {
+            background-color: hsl(100, 64%, 86%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent additional-css">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+</body>
+
+</html>

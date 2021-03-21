@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Up</title>
+    <style>
+        body {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+        }
+
+        .parent {
+            height: auto;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .parent.additional-css {
+            position: absolute;
+            width: 100%;
+        }
+
+        .visual {
+            height: 200px;
+            width: 100%;
+        }
+
+        .card:first-child .visual.additional-css {
+            background-color: hsl(335, 52%, 92%);
+            border: 1px solid hsl(335, 82%, 86%);
+        }
+
+        .card:nth-child(2) .visual.additional-css {
+            background-color: hsl(187, 61%, 79%);
+            border: 1px solid hsl(187, 54%, 68%);
+        }
+
+        .card:last-child .visual.additional-css {
+            background-color: hsl(100, 64%, 86%);
+            border: 1px solid hsl(100, 41%, 76%);
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            justify-content: space-between;
+        }
+
+        .card.additional-css {
+            background-color:hsl(42, 97%, 85%);
+            border: 1px solid hsl(42, 100%, 73%);
+        }
+
+        h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent additional-css">
+        <div class="card additional-css">
+            <h3>Title - Card 1</h3>
+            <p contenteditable>Medium length description with a few more words here.</p>
+            <div class="visual additional-css"></div>
+        </div>
+        <div class="card additional-css">
+            <h3>Title - Card 2</h3>
+            <p contenteditable>Long Description. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <div class="visual additional-css"></div>
+        </div>
+        <div class="card additional-css">
+            <h3>Title - Card 3</h3>
+            <p contenteditable>Short Description.</p>
+            <div class="visual additional-css"></div>
+        </div>
+    </div>
+</body>
+
+</html>

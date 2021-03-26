@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respect for Aspect</title>
+    <style>
+        .parent {
+            display: grid;
+            place-items: center;
+        }
+
+        .parent.additional-css {
+            position: absolute;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+            background-color: beige;
+        }
+
+        .card {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .card.additional-css {
+            background-color: hsl(187, 61%, 79%);
+        }
+
+        .visual {
+            aspect-ratio: 16 / 9;
+        }
+
+        .visual.additional-css {
+            background-color: hsl(100, 64%, 86%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent additional-css">
+        <div class="card additional-css">
+            <h1>Video Title</h1>
+            <div class="visual additional-css"></div>
+            <p>Descriptive Text. This demo works in Chromium 84+.</p>
+        </div>
+    </div>
+</body>
+
+</html>

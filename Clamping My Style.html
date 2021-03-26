@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clmaping My Style</title>
+    <style>
+        .parent {
+            display: grid;
+            place-items: center;
+        }
+
+        .parent.additional-css {
+            position: absolute;
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+            background-color: beige;
+        }
+
+        .card {
+            width: clamp(23ch, 50%, 46ch);
+            /* 1ch = 1 character width */
+            /* clamp(MIN, VAL, MAX) = max(MIN, min(VAL, MAX)) */
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .card.additional-css {
+            background-color: hsl(283, 24%, 86%);
+        }
+
+        .visual {
+            height: 125px;
+            width: 100%;
+        }
+
+        .visual.additional-css {
+            background-color: hsl(42, 97%, 85%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent additional-css">
+        <div class="card additional-css">
+            <h1>Title Here</h1>
+            <div class="visual additional-css"></div>
+            <p>Descriptive Text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed est error repellat
+                veritatis.</p>
+        </div>
+    </div>
+</body>
+
+</html>
